@@ -9,3 +9,4 @@ These Include(but are not limited to):
 3. bs4
 
 Note that if the program does not work, it is likely a result of a server error on reddit's end which is preventing the program from getting data from the server(response code error 502)
+Another error that can occour is the underlying HTML has changed. It did not do this over the few weeks I spent coding this, however, it can occour at any time.
