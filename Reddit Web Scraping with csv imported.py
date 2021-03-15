@@ -126,7 +126,7 @@ def main():
             soup = BeautifulSoup(page.content, 'html.parser')
             # Sorts out all the content between 'h3' tags and stores it in the list
             for title in soup.find_all('h3'):
-                stock = title.getText()
+                stock = title.get_text()
                 stonkSearch.append(stock)
             # Makes sure stocks aren't counted 2 or 3 times by comparing the current iteration comments to the last iteration stocks
             # Deletes the comment in the current list if it is identical to one in the previous list
@@ -169,7 +169,7 @@ def main():
                 threadPage = requests.get(filteredLinks[d])
                 threadSoup = BeautifulSoup(threadPage.content, 'html.parser')
                 for comment in threadSoup.find_all('p'):
-                    commentData = comment.getText()
+                    commentData = comment.get_text()
                     commentFound.append(commentData)
             c = 0
             # Does a similar thing to a previous loop, makes sure that the comments from the previous iteration aren't 'double counted'
