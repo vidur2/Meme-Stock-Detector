@@ -8,5 +8,4 @@ These Include(but are not limited to):
 2. Requests
 3. bs4
 
-Note that if the program does not work, it is likely a result of a server error on reddit's end which is preventing the program from getting data from the server(response code error 502)
-Another error that can occour is the underlying HTML has changed. It did not do this over the few weeks I spent coding this, however, it can occour at any time.
+3/15 Update Reason- The Source code for one of the packages that I use(bs4) changed one of its commands which I use- soup.getText- to soup.get_text(). The code ran, but did not function properly with the previous command, thus making it paramount I add this update. The code does the same thing as before, I simply updated it to work with the new source code which the makers of bs4 pushed to their package.
